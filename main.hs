@@ -26,10 +26,10 @@ instance Cache IO where
   storeCache _ = return ()
 
 instance DataSource IO where
-  getFromSource user = return $ [DataResult $ "source: " <> user]
+  getFromSource user = return $ [DataResult $ "source: " <> user <> " Turturro"]
 
 
 main = do
-  user <- requestData "John Toturo"
+  user <- requestData "John"
   print user 
 
